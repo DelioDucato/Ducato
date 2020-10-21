@@ -96,7 +96,6 @@ contract KToken is ERC20 {
     * @dev calculates the total supply of the specific kToken
     * since the balance of every single user increases over time, the total supply
     * does that too.
-    * @return the current total supply
     **/
     function totalSupply() public virtual override view returns(uint256) {
     }
@@ -105,7 +104,6 @@ contract KToken is ERC20 {
      * @dev Used to validate transfers before actually executing them.
      * @param _user address of the user to check
      * @param _amount the amount to check
-     * @return true if the _user can transfer _amount, false otherwise
      **/
     function isTransferAllowed(address _user, uint256 _amount) public view returns (bool) {
     }

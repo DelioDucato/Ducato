@@ -2,7 +2,7 @@ pragma solidity ^0.6.0;
 
 import "../interfaces/IPoolInterestRateStrategy.sol";
 import "../libraries/WadRayMath.sol";
-import "../configuration/DelioPoolAddressesProvider.sol";
+import "../configuration/DelioLendingPoolAddressesProvider.sol";
 //import "./LendingPoolCore.sol";
 //import "../interfaces/ILendingRateOracle.sol";
 
@@ -26,7 +26,7 @@ contract DefaultPoolInterestRateStrategy is IPoolInterestRateStrategy {
 
     uint256 public constant EXCESS_UTILIZATION_RATE = 0.2 * 1e27;
 
-    DelioPoolAddressesProvider public addressesProvider;
+    DelioLendingPoolAddressesProvider public addressesProvider;
 
 
     //base variable borrow rate when Utilization rate = 0. Expressed in ray
@@ -39,7 +39,7 @@ contract DefaultPoolInterestRateStrategy is IPoolInterestRateStrategy {
     uint256 public variableRateSlope2;
 
     constructor(
-        DelioPoolAddressesProvider _provider,
+        DelioLendingPoolAddressesProvider _provider,
         uint256 _baseVariableBorrowRate,
         uint256 _variableRateSlope1,
         uint256 _variableRateSlope2
