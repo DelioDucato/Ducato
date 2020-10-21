@@ -19,7 +19,6 @@ interface IPoolInterestRateStrategy {
     *
     */
     function calculateInterestRates(
-        address _reserve,
         uint256 _utilizationRate,
         uint256 _totalBorrowsVariable
     )
