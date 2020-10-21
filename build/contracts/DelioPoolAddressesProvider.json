@@ -1,0 +1,131 @@
+{
+  "contractName": "DelioPoolAddressesProvider",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.2+commit.bacdbe57\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"author\":\"Ducato*\",\"methods\":{},\"title\":\"DelioPoolAddressesProvider contract\"},\"userdoc\":{\"methods\":{},\"notice\":\"Is the main registry of the protocol. All the different components of the protocol are accessible through the addresses provider.\"}},\"settings\":{\"compilationTarget\":{\"/D/Ducato-Development/Ducato/contracts/configuration/DelioPoolAddressesProvider.sol\":\"DelioPoolAddressesProvider\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/D/Ducato-Development/Ducato/contracts/configuration/DelioPoolAddressesProvider.sol\":{\"keccak256\":\"0x4e63043f095f1516ddff64fedaef862581b0e72aced4e8e33870a77051cf630f\",\"urls\":[\"bzz-raw://e187e7fbcca9818a23b61c08d3efb6003d0d91a8d3ec1dc3bd0a1a3d17ef95b9\",\"dweb:/ipfs/QmcZLq7iGhJ8s9QGfwwd3LxMxWWnomeh2VjwGp6yEMGLeT\"]},\"openzeppelin-solidity/contracts/GSN/Context.sol\":{\"keccak256\":\"0xdb26cbf4d028490f49831a7865c2fe1b28db44b535ca8d343785a3b768aae183\",\"urls\":[\"bzz-raw://840b14ce0315c47d49ba328f1f9fa7654ded1c9e1559e6c5e777a7b2dc28bf0a\",\"dweb:/ipfs/QmTLLabn4wcfGro9LEmUXUN2nwKqZSotXMvjDCLXEnLtZP\"]},\"openzeppelin-solidity/contracts/access/Ownable.sol\":{\"keccak256\":\"0x4bd6402ca6b3419008c2b482aff54e66836e8cb4eba2680e42ac5884ae6424fc\",\"urls\":[\"bzz-raw://8f9f711fb8d0d92aeea1c327e3845d13ca1fa8f142e47f8723cd5b3106fb29a3\",\"dweb:/ipfs/QmVQUReDW9f4zGqhizwHnyU8EntMs95tbASdqkGncnikba\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220d4cead88ade7d2c228071d5bd65cdfd5875f2b7e765aa6410cb27e120f9ae4e664736f6c63430006020033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220d4cead88ade7d2c228071d5bd65cdfd5875f2b7e765aa6410cb27e120f9ae4e664736f6c63430006020033",
+  "sourceMap": "311:40:1:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;311:40:1;;;;;;;",
+  "deployedSourceMap": "311:40:1:-:0;;;;;",
+  "source": "pragma solidity ^0.6.0;\r\n\r\nimport \"openzeppelin-solidity/contracts/access/Ownable.sol\";\r\n\r\n/**\r\n* @title DelioPoolAddressesProvider contract\r\n* @notice Is the main registry of the protocol. All the different components of the protocol are accessible\r\n* through the addresses provider.\r\n* @author Ducato\r\n**/\r\n\r\ncontract DelioPoolAddressesProvider {\r\n}",
+  "sourcePath": "D:\\Ducato-Development\\Ducato\\contracts\\configuration\\DelioPoolAddressesProvider.sol",
+  "ast": {
+    "absolutePath": "/D/Ducato-Development/Ducato/contracts/configuration/DelioPoolAddressesProvider.sol",
+    "exportedSymbols": {
+      "DelioPoolAddressesProvider": [
+        36
+      ]
+    },
+    "id": 37,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/access/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/access/Ownable.sol",
+        "id": 35,
+        "nodeType": "ImportDirective",
+        "scope": 37,
+        "sourceUnit": 914,
+        "src": "27:60:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title DelioPoolAddressesProvider contract\n@notice Is the main registry of the protocol. All the different components of the protocol are accessible\nthrough the addresses provider.\n@author Ducato*",
+        "fullyImplemented": true,
+        "id": 36,
+        "linearizedBaseContracts": [
+          36
+        ],
+        "name": "DelioPoolAddressesProvider",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 37,
+        "src": "311:40:1"
+      }
+    ],
+    "src": "0:351:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Ducato-Development/Ducato/contracts/configuration/DelioPoolAddressesProvider.sol",
+    "exportedSymbols": {
+      "DelioPoolAddressesProvider": [
+        36
+      ]
+    },
+    "id": 37,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          "^",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "absolutePath": "openzeppelin-solidity/contracts/access/Ownable.sol",
+        "file": "openzeppelin-solidity/contracts/access/Ownable.sol",
+        "id": 35,
+        "nodeType": "ImportDirective",
+        "scope": 37,
+        "sourceUnit": 914,
+        "src": "27:60:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title DelioPoolAddressesProvider contract\n@notice Is the main registry of the protocol. All the different components of the protocol are accessible\nthrough the addresses provider.\n@author Ducato*",
+        "fullyImplemented": true,
+        "id": 36,
+        "linearizedBaseContracts": [
+          36
+        ],
+        "name": "DelioPoolAddressesProvider",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 37,
+        "src": "311:40:1"
+      }
+    ],
+    "src": "0:351:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.2+commit.bacdbe57.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.5",
+  "updatedAt": "2020-10-16T00:48:38.313Z",
+  "devdoc": {
+    "author": "Ducato*",
+    "methods": {},
+    "title": "DelioPoolAddressesProvider contract"
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Is the main registry of the protocol. All the different components of the protocol are accessible through the addresses provider."
+  }
+}

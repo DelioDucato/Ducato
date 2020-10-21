@@ -1,5 +1,5 @@
-var HelloWorld = artifacts.require("HelloWorld");
+var KToken = artifacts.require("KToken");
 
 module.exports = function(deployer) {
-    deployer.deploy(HelloWorld);
+    deployer.deploy(KToken);
 };

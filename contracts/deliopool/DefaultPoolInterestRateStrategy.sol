@@ -2,7 +2,7 @@ pragma solidity ^0.6.0;
 
 import "../interfaces/IPoolInterestRateStrategy.sol";
 import "../libraries/WadRayMath.sol";
-//import "../configuration/LendingPoolAddressesProvider.sol";
+import "../configuration/DelioPoolAddressesProvider.sol";
 //import "./LendingPoolCore.sol";
 //import "../interfaces/ILendingRateOracle.sol";
 
@@ -26,7 +26,7 @@ contract DefaultPoolInterestRateStrategy is IPoolInterestRateStrategy {
 
     uint256 public constant EXCESS_UTILIZATION_RATE = 0.2 * 1e27;
 
-    //LendingPoolAddressesProvider public addressesProvider;
+    DelioPoolAddressesProvider public addressesProvider;
 
 
     //base variable borrow rate when Utilization rate = 0. Expressed in ray
@@ -38,29 +38,16 @@ contract DefaultPoolInterestRateStrategy is IPoolInterestRateStrategy {
     //slope of the variable interest curve when utilization rate > OPTIMAL_UTILIZATION_RATE. Expressed in ray
     uint256 public variableRateSlope2;
 
-    //slope of the stable interest curve when utilization rate > 0 and <= OPTIMAL_UTILIZATION_RATE. Expressed in ray
-    //uint256 public stableRateSlope1;
-
-    //slope of the stable interest curve when utilization rate > OPTIMAL_UTILIZATION_RATE. Expressed in ray
-    //uint256 public stableRateSlope2;
-    address public reserve;
-
     constructor(
-        address _reserve,
-       // LendingPoolAddressesProvider _provider,
+        DelioPoolAddressesProvider _provider,
         uint256 _baseVariableBorrowRate,
         uint256 _variableRateSlope1,
         uint256 _variableRateSlope2
-     //  uint256 _stableRateSlope1,
-     //   uint256 _stableRateSlope2
     ) public {
-        //addressesProvider = _provider;
+        addressesProvider = _provider;
         baseVariableBorrowRate = _baseVariableBorrowRate;
         variableRateSlope1 = _variableRateSlope1;
         variableRateSlope2 = _variableRateSlope2;
-      //  stableRateSlope1 = _stableRateSlope1;
-       // stableRateSlope2 = _stableRateSlope2;
-        reserve = _reserve;
     }
 
     /**
@@ -81,12 +68,10 @@ contract DefaultPoolInterestRateStrategy is IPoolInterestRateStrategy {
 
     /**
     * @dev calculates the interest rates depending on the available liquidity and the total borrowed.
-    * @param _reserve the address of the reserve
     * @param _availableLiquidity the liquidity available in the reserve
-     * @param _totalBorrowsVariable the total borrowed from the reserve at a variable rate
+    * @param _totalBorrowsVariable the total borrowed from the reserve at a variable rate
     **/
     function calculateInterestRates(
-        address _reserve,
         uint256 _availableLiquidity,
         uint256 _totalBorrowsVariable
     )
